@@ -66,10 +66,15 @@ jobs:
     - name: Check Out
       uses: actions/checkout@v2
 
+    - name: Install Python 2.x
+      run: |
+           sudo apt-get update
+           sudo apt-get install python2.7
+           
     - name: set up Python 2.x
       uses: actions/setup-python@v2
       with:
-        python-version: 2.x  
+        python-version: 2.7
         
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
     - name: Cleanup
