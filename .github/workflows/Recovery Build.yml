@@ -65,16 +65,11 @@ jobs:
     # You might want to Checkout your repo first, but not mandatory
     - name: Check Out
       uses: actions/checkout@v2
-
-    - name: Install Python 2.x
-      run: |
-           sudo apt-get update
-           sudo apt-get install python2.7
            
-    - name: set up Python 2.x
-      uses: actions/setup-python@v2
+    - name: set up Python 3.x
+      uses: actions/setup-python@v3
       with:
-        python-version: 2.7
+        python-version: 3.x
         
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
     - name: Cleanup
